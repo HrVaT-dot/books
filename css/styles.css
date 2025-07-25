@@ -1,0 +1,198 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fcefee 0%, #f3e8ff 100%);
+  margin: 0;
+  padding: 0;
+  color: #5a3e6a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+.container {
+  max-width: 600px;
+  width: 90%;
+  background: #fff0f6;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 24px rgba(170, 90, 190, 0.2);
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  user-select: none;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #a34d96;
+}
+
+.btn {
+  margin: 12px 6px;
+  padding: 12px 28px;
+  background: #c56ec1;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px #db9de3;
+  transition: background 0.4s, transform 0.25s, box-shadow 0.3s;
+  user-select: none;
+}
+
+.btn:hover {
+  background: #a944b5;
+  transform: scale(1.07);
+  box-shadow: 0 6px 14px #cc88df;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 14px 18px;
+  width: 75%;
+  margin: 14px 0 20px;
+  border: 2px solid #d4a1d6;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  outline: none;
+  user-select: text;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #a05a9d;
+  box-shadow: 0 0 8px #bb8bd9;
+}
+
+.book-card {
+  display: flex;
+  align-items: center;
+  background: #f8e8f7;
+  margin: 12px 0;
+  padding: 14px 18px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px #ddb6e1aa;
+  animation: slideInFade 0.6s ease forwards;
+  transition: box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.book-card:hover {
+  box-shadow: 0 6px 18px #cc88dfcc;
+}
+
+.book-card img {
+  width: 70px;
+  border-radius: 10px;
+  margin-right: 14px;
+  filter: drop-shadow(0 2px 1px #d6a0db);
+  user-select: none;
+}
+
+.book-card div {
+  flex: 1;
+  text-align: left;
+  color: #6a3e6b;
+  user-select: text;
+}
+
+.book-card h3 {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 18px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+  }
+
+  .book-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-card img {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 140px;
+    border-radius: 12px;
+  }
+
+  .book-card div {
+    text-align: center;
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: #f4c2f4;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #6b3e75;
+  box-shadow: 0 2px 5px #d499df;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #c174cb;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px #c174cb;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeInUp 0.5s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
